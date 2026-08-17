@@ -1,0 +1,6 @@
+{
+  "name": "مؤسسة الملك اسكيا الخيرية | Askia Royal Charity Foundation",
+  "description": "الموقع الرسمي لمؤسسة الملك اسكيا الخيرية (FONDATION ROYALE ASKIA) للعمل الإنساني والتنموي في مالي وبوركينا فاسو والنيجر.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
