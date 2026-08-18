@@ -93,7 +93,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 pb-4 border-b border-stone-800 gap-4">
           <div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-stone-900 border border-stone-800 text-red-400 text-xs font-bold mb-3">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-950/50 border border-emerald-800 text-emerald-400 text-xs font-bold mb-3">
               <Briefcase className="w-3.5 h-3.5" />
               <span>سجل المشاريع الميدانية</span>
             </div>
@@ -114,7 +114,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
             <button
               onClick={() => setSelectedCountry('all')}
               className={`px-3 py-1.5 rounded-xl text-xs font-bold transition ${
-                selectedCountry === 'all' ? 'bg-red-600 text-white' : 'bg-stone-950 text-stone-400 hover:text-stone-200 border border-stone-800'
+                selectedCountry === 'all' ? 'bg-emerald-600 text-white' : 'bg-stone-950 text-stone-400 hover:text-stone-200 border border-stone-800'
               }`}
             >
               {t.projects.allCountries}
@@ -122,7 +122,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
             <button
               onClick={() => setSelectedCountry('mali')}
               className={`px-3 py-1.5 rounded-xl text-xs font-bold transition ${
-                selectedCountry === 'mali' ? 'bg-red-600 text-white' : 'bg-stone-950 text-stone-400 hover:text-stone-200 border border-stone-800'
+                selectedCountry === 'mali' ? 'bg-emerald-600 text-white' : 'bg-stone-950 text-stone-400 hover:text-stone-200 border border-stone-800'
               }`}
             >
               {t.whereWeWork.mali}
@@ -130,7 +130,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
             <button
               onClick={() => setSelectedCountry('burkina')}
               className={`px-3 py-1.5 rounded-xl text-xs font-bold transition ${
-                selectedCountry === 'burkina' ? 'bg-red-600 text-white' : 'bg-stone-950 text-stone-400 hover:text-stone-200 border border-stone-800'
+                selectedCountry === 'burkina' ? 'bg-emerald-600 text-white' : 'bg-stone-950 text-stone-400 hover:text-stone-200 border border-stone-800'
               }`}
             >
               {t.whereWeWork.burkina}
@@ -138,7 +138,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
             <button
               onClick={() => setSelectedCountry('niger')}
               className={`px-3 py-1.5 rounded-xl text-xs font-bold transition ${
-                selectedCountry === 'niger' ? 'bg-red-600 text-white' : 'bg-stone-950 text-stone-400 hover:text-stone-200 border border-stone-800'
+                selectedCountry === 'niger' ? 'bg-emerald-600 text-white' : 'bg-stone-950 text-stone-400 hover:text-stone-200 border border-stone-800'
               }`}
             >
               {t.whereWeWork.niger}
@@ -201,7 +201,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
             return (
               <div
                 key={project.id}
-                className="group bg-stone-900/60 rounded-3xl border border-stone-800 hover:border-stone-700 transition-all duration-300 overflow-hidden flex flex-col justify-between shadow-xl hover:-translate-y-1"
+                className="group bg-stone-900/60 rounded-3xl border border-stone-800 hover:border-emerald-700/60 transition-all duration-300 overflow-hidden flex flex-col justify-between shadow-xl hover:-translate-y-1"
               >
                 {/* Image */}
                 <div className="relative h-48 overflow-hidden">
@@ -227,7 +227,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                 {/* Content */}
                 <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
                   <div>
-                    <h3 className="text-lg font-black text-white group-hover:text-red-400 transition-colors line-clamp-2">
+                    <h3 className="text-lg font-black text-white group-hover:text-emerald-400 transition-colors line-clamp-2">
                       {title}
                     </h3>
                     <p className="text-stone-400 text-xs leading-relaxed mt-2 line-clamp-3">
@@ -252,7 +252,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                     </button>
                     <button
                       onClick={() => onOpenDonate(project.id)}
-                      className="bg-red-600 hover:bg-red-500 text-white font-bold py-2.5 px-4 rounded-xl text-xs transition shadow-lg shadow-red-950/40"
+                      className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2.5 px-4 rounded-xl text-xs transition shadow-lg shadow-emerald-950/40"
                     >
                       {t.projects.supportProject}
                     </button>
@@ -309,7 +309,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
               {activeProjectModal.objectives && activeProjectModal.objectives.length > 0 && (
                 <div className="space-y-3">
                   <div className="flex items-center gap-2 text-xs font-bold text-white uppercase tracking-wider">
-                    <Target className="w-4 h-4 text-red-500" />
+                    <Target className="w-4 h-4 text-emerald-500" />
                     <span>{t.projects.objectives}</span>
                   </div>
                   <ul className="space-y-2">
@@ -360,7 +360,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                     setActiveProjectModal(null);
                     onOpenDonate(id);
                   }}
-                  className="px-6 py-2.5 rounded-xl bg-red-600 hover:bg-red-500 text-white text-xs font-bold shadow-lg shadow-red-950/60"
+                  className="px-6 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-lg shadow-emerald-950/60"
                 >
                   {t.projects.supportProject}
                 </button>

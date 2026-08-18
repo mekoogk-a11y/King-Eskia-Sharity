@@ -136,7 +136,7 @@ export const DonationModal: React.FC<DonationModalProps> = ({
         {/* Modal Header */}
         <div className="p-6 bg-stone-900/80 border-b border-stone-800 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-2.5 rounded-xl bg-red-600/20 text-red-500 border border-red-500/30">
+            <div className="p-2.5 rounded-xl bg-emerald-600/20 text-emerald-400 border border-emerald-500/30">
               <Heart className="w-5 h-5 fill-current" />
             </div>
             <div>
@@ -173,7 +173,7 @@ export const DonationModal: React.FC<DonationModalProps> = ({
                     onClick={() => setFrequency('one-time')}
                     className={`py-2.5 px-3 rounded-xl text-xs font-bold transition border ${
                       frequency === 'one-time'
-                        ? 'bg-red-600 text-white border-red-500 shadow-md'
+                        ? 'bg-emerald-600 text-white border-emerald-500 shadow-md'
                         : 'bg-stone-900 text-stone-400 border-stone-800 hover:border-stone-700'
                     }`}
                   >
@@ -184,7 +184,7 @@ export const DonationModal: React.FC<DonationModalProps> = ({
                     onClick={() => setFrequency('monthly')}
                     className={`py-2.5 px-3 rounded-xl text-xs font-bold transition border ${
                       frequency === 'monthly'
-                        ? 'bg-red-600 text-white border-red-500 shadow-md'
+                        ? 'bg-emerald-600 text-white border-emerald-500 shadow-md'
                         : 'bg-stone-900 text-stone-400 border-stone-800 hover:border-stone-700'
                     }`}
                   >
@@ -195,7 +195,7 @@ export const DonationModal: React.FC<DonationModalProps> = ({
                     onClick={() => setFrequency('annual')}
                     className={`py-2.5 px-3 rounded-xl text-xs font-bold transition border ${
                       frequency === 'annual'
-                        ? 'bg-red-600 text-white border-red-500 shadow-md'
+                        ? 'bg-emerald-600 text-white border-emerald-500 shadow-md'
                         : 'bg-stone-900 text-stone-400 border-stone-800 hover:border-stone-700'
                     }`}
                   >
@@ -212,7 +212,7 @@ export const DonationModal: React.FC<DonationModalProps> = ({
                 <select
                   value={selectedCampaignId}
                   onChange={(e) => setSelectedCampaignId(e.target.value)}
-                  className="w-full bg-stone-900 border border-stone-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-red-500 font-bold"
+                  className="w-full bg-stone-900 border border-stone-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500 font-bold"
                 >
                   <option value="general">صندوق الطوارئ العام للساحل (أولوية الميدان)</option>
                   {campaigns.map((c) => (
@@ -236,7 +236,7 @@ export const DonationModal: React.FC<DonationModalProps> = ({
                         type="button"
                         onClick={() => setCurrency(curr)}
                         className={`px-2 py-0.5 rounded text-[11px] font-bold ${
-                          currency === curr ? 'bg-red-600 text-white' : 'bg-stone-900 text-stone-400'
+                          currency === curr ? 'bg-emerald-600 text-white' : 'bg-stone-900 text-stone-400'
                         }`}
                       >
                         {curr}
@@ -253,7 +253,7 @@ export const DonationModal: React.FC<DonationModalProps> = ({
                       onClick={() => handleSelectAmount(val)}
                       className={`py-3 rounded-xl text-sm font-black font-mono transition border ${
                         amount === val && !customAmount
-                          ? 'bg-red-600 text-white border-red-500 shadow-md'
+                          ? 'bg-emerald-600 text-white border-emerald-500 shadow-md'
                           : 'bg-stone-900 text-stone-300 border-stone-800 hover:border-stone-700'
                       }`}
                     >
@@ -268,7 +268,7 @@ export const DonationModal: React.FC<DonationModalProps> = ({
                     value={customAmount}
                     onChange={handleCustomAmountChange}
                     placeholder={t.donation.customAmount}
-                    className="w-full bg-stone-900 border border-stone-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-red-500 font-mono"
+                    className="w-full bg-stone-900 border border-stone-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500 font-mono"
                   />
                   <div className="absolute end-4 top-1/2 -translate-y-1/2 text-xs font-bold text-stone-400 font-mono">
                     {currency}
@@ -287,11 +287,11 @@ export const DonationModal: React.FC<DonationModalProps> = ({
                     onClick={() => setPaymentMethod('card')}
                     className={`p-3 rounded-xl border text-start transition flex flex-col items-center justify-center gap-1.5 ${
                       paymentMethod === 'card'
-                        ? 'bg-red-950/40 border-red-600 text-white'
+                        ? 'bg-emerald-950/40 border-emerald-600 text-white'
                         : 'bg-stone-900 border-stone-800 text-stone-400'
                     }`}
                   >
-                    <CreditCard className="w-5 h-5 text-red-400" />
+                    <CreditCard className="w-5 h-5 text-emerald-400" />
                     <span className="text-[11px] font-bold">بطاقة ائتمان / مدى</span>
                   </button>
 
@@ -300,7 +300,7 @@ export const DonationModal: React.FC<DonationModalProps> = ({
                     onClick={() => setPaymentMethod('mobile_money')}
                     className={`p-3 rounded-xl border text-start transition flex flex-col items-center justify-center gap-1.5 ${
                       paymentMethod === 'mobile_money'
-                        ? 'bg-red-950/40 border-red-600 text-white'
+                        ? 'bg-emerald-950/40 border-emerald-600 text-white'
                         : 'bg-stone-900 border-stone-800 text-stone-400'
                     }`}
                   >
@@ -313,7 +313,7 @@ export const DonationModal: React.FC<DonationModalProps> = ({
                     onClick={() => setPaymentMethod('bank')}
                     className={`p-3 rounded-xl border text-start transition flex flex-col items-center justify-center gap-1.5 ${
                       paymentMethod === 'bank'
-                        ? 'bg-red-950/40 border-red-600 text-white'
+                        ? 'bg-emerald-950/40 border-emerald-600 text-white'
                         : 'bg-stone-900 border-stone-800 text-stone-400'
                     }`}
                   >
@@ -334,7 +334,7 @@ export const DonationModal: React.FC<DonationModalProps> = ({
                       type="checkbox"
                       checked={isAnonymous}
                       onChange={(e) => setIsAnonymous(e.target.checked)}
-                      className="rounded bg-stone-900 border-stone-700 text-red-600 focus:ring-0"
+                      className="rounded bg-stone-900 border-stone-700 text-emerald-600 focus:ring-0"
                     />
                     <span>{t.donation.anonymous}</span>
                   </label>
@@ -347,7 +347,7 @@ export const DonationModal: React.FC<DonationModalProps> = ({
                       value={donorName}
                       onChange={(e) => setDonorName(e.target.value)}
                       placeholder={t.donation.fullName}
-                      className="bg-stone-900 border border-stone-800 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-red-500"
+                      className="bg-stone-900 border border-stone-800 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-emerald-500"
                     />
                     <input
                       type="email"
@@ -355,7 +355,7 @@ export const DonationModal: React.FC<DonationModalProps> = ({
                       value={donorEmail}
                       onChange={(e) => setDonorEmail(e.target.value)}
                       placeholder={t.donation.email}
-                      className="bg-stone-900 border border-stone-800 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-red-500"
+                      className="bg-stone-900 border border-stone-800 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-emerald-500"
                     />
                   </div>
                 )}
@@ -365,7 +365,7 @@ export const DonationModal: React.FC<DonationModalProps> = ({
                   value={dedicationMessage}
                   onChange={(e) => setDedicationMessage(e.target.value)}
                   placeholder="إهداء أو نية خاصة (مثال: صدقة جارية عن الوالدين)..."
-                  className="w-full bg-stone-900 border border-stone-800 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-red-500"
+                  className="w-full bg-stone-900 border border-stone-800 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-emerald-500"
                 />
               </div>
 
@@ -379,7 +379,7 @@ export const DonationModal: React.FC<DonationModalProps> = ({
               <button
                 type="submit"
                 disabled={isProcessing}
-                className="w-full bg-gradient-to-r from-red-600 via-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-black py-4 px-6 rounded-2xl text-base flex items-center justify-center gap-2 shadow-xl shadow-red-950/60 border border-red-500/40 transition disabled:opacity-50"
+                className="w-full bg-gradient-to-r from-emerald-600 via-emerald-600 to-emerald-700 hover:from-emerald-500 hover:to-emerald-600 text-white font-black py-4 px-6 rounded-2xl text-base flex items-center justify-center gap-2 shadow-xl shadow-emerald-950/60 border border-emerald-500/40 transition disabled:opacity-50"
               >
                 {isProcessing ? (
                   <span className="flex items-center gap-2">
@@ -416,7 +416,7 @@ export const DonationModal: React.FC<DonationModalProps> = ({
               <div className="p-5 rounded-2xl bg-stone-900 border border-stone-800 text-start space-y-3 font-mono text-xs">
                 <div className="flex items-center justify-between pb-2 border-b border-stone-800 text-stone-400">
                   <span className="flex items-center gap-1 font-bold text-white">
-                    <Receipt className="w-4 h-4 text-red-500" />
+                    <Receipt className="w-4 h-4 text-emerald-500" />
                     <span>سند تبرع معتمد</span>
                   </span>
                   <span>{completedDonation.receiptNumber}</span>
@@ -437,7 +437,7 @@ export const DonationModal: React.FC<DonationModalProps> = ({
                       onClick={handleCopyTransaction}
                       className="p-1 hover:text-white transition"
                     >
-                      {copiedId ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
+                      {copiedId ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5 text-stone-400" />}
                     </button>
                   </div>
                 </div>

@@ -20,7 +20,7 @@ export const AboutPage: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 space-y-16">
         {/* Page Hero */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-950/40 border border-red-800 text-red-400 text-xs font-bold">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-950/40 border border-emerald-800 text-emerald-400 text-xs font-bold">
             <Crown className="w-3.5 h-3.5" />
             <span>الإرث التاريخي والرسالة الإنسانية</span>
           </div>
@@ -52,12 +52,12 @@ export const AboutPage: React.FC = () => {
               <div className="relative rounded-2xl overflow-hidden border border-stone-700 shadow-2xl">
                 <img
                   src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=800&q=80"
-                  alt="Askia Legacy"
+                  alt="Humanitarian Impact in Mali"
                   className="w-full h-64 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent" />
                 <div className="absolute bottom-3 start-4 end-4 text-xs text-stone-300 font-mono text-center bg-black/80 backdrop-blur-md p-2 rounded-xl border border-stone-700">
-                  ضريح اسكيا التاريخي في غاو، مالي (اليونسكو)
+                  مبادرات بناء الإنسان والتنمية المجتمعية في مالي والساحل
                 </div>
               </div>
             </div>
@@ -67,7 +67,7 @@ export const AboutPage: React.FC = () => {
         {/* Vision & Mission Bento Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="p-8 rounded-3xl bg-stone-900/60 border border-stone-800 space-y-4">
-            <div className="w-12 h-12 rounded-2xl bg-red-950/60 border border-red-800 flex items-center justify-center text-red-500">
+            <div className="w-12 h-12 rounded-2xl bg-emerald-950/60 border border-emerald-800 flex items-center justify-center text-emerald-400">
               <Target className="w-6 h-6" />
             </div>
             <h3 className="text-xl font-black text-white">{t.about.visionTitle}</h3>
@@ -94,7 +94,7 @@ export const AboutPage: React.FC = () => {
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="p-6 rounded-2xl bg-stone-900/40 border border-stone-800 space-y-2">
-              <div className="text-red-500 font-bold text-lg font-mono">01. الكرامة الإنسانية</div>
+              <div className="text-emerald-400 font-bold text-lg font-mono">01. الكرامة الإنسانية</div>
               <p className="text-xs text-stone-400 leading-relaxed">
                 تقديم العون دون تمييز أو منّ، وصيانة عزة الإنسان في أصعب الظروف.
               </p>

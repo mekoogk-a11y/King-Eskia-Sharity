@@ -8,7 +8,6 @@ import { WhereWeWorkMap } from './components/sections/WhereWeWorkMap';
 import { HeartOfMaliSection } from './components/sections/HeartOfMaliSection';
 import { WhyWeWorkSection } from './components/sections/WhyWeWorkSection';
 import { HumanitarianNeedsSection } from './components/sections/HumanitarianNeedsSection';
-import { CampaignsSection } from './components/sections/CampaignsSection';
 import { ProjectsSection } from './components/sections/ProjectsSection';
 import { TransparencySection } from './components/sections/TransparencySection';
 import { NewsSection } from './components/sections/NewsSection';
@@ -85,7 +84,7 @@ function MainApp() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-stone-100 flex flex-col font-sans selection:bg-red-600 selection:text-white">
+    <div className="min-h-screen bg-black text-stone-100 flex flex-col font-sans selection:bg-emerald-600 selection:text-white">
       {/* Top Main Navigation */}
       <Navbar
         activeSection={currentSection}
@@ -112,10 +111,6 @@ function MainApp() {
               onOpenDonate={() => handleOpenDonate()}
             />
             <WhyWeWorkSection />
-            <CampaignsSection
-              campaigns={campaigns}
-              onOpenDonate={handleOpenDonate}
-            />
             <ProjectsSection
               projects={projects}
               initialCountryFilter={selectedCountryFilter}
@@ -150,8 +145,9 @@ function MainApp() {
 
         {currentSection === 'campaigns' && (
           <div className="py-8 bg-stone-950">
-            <CampaignsSection
-              campaigns={campaigns}
+            <ProjectsSection
+              projects={projects}
+              initialCountryFilter={selectedCountryFilter}
               onOpenDonate={handleOpenDonate}
             />
           </div>

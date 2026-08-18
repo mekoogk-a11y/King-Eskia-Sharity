@@ -47,7 +47,7 @@ export const PartnerContactPage: React.FC = () => {
       country: 'جمهورية مالي (Mali)',
       city: 'باماكو (المقر الرئيسي)',
       address: 'حي أكاسيا - شارع النيجر، باماكو',
-      phone: '+223 20 00 00 00',
+      phone: '00249919980435',
       email: 'mali@askiafoundation.org',
       flag: 'ML',
     },
@@ -55,7 +55,7 @@ export const PartnerContactPage: React.FC = () => {
       country: 'بوركينا فاسو (Burkina Faso)',
       city: 'واغادوغو (المكتب الميداني)',
       address: 'منطقة كوادوغو - شارع الإنسانية، واغادوغو',
-      phone: '+226 25 00 00 00',
+      phone: '00249919980435',
       email: 'burkina@askiafoundation.org',
       flag: 'BF',
     },
@@ -63,7 +63,7 @@ export const PartnerContactPage: React.FC = () => {
       country: 'جمهورية النيجر (Niger)',
       city: 'نيامي (المكتب الإقليمي)',
       address: 'حي البلاطو - قرب طريق النهر، نيامي',
-      phone: '+227 20 00 00 00',
+      phone: '00249919980435',
       email: 'niger@askiafoundation.org',
       flag: 'NE',
     },
@@ -74,7 +74,7 @@ export const PartnerContactPage: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 space-y-12">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-950/40 border border-red-800 text-red-400 text-xs font-bold">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-950/40 border border-emerald-800 text-emerald-400 text-xs font-bold">
             <Handshake className="w-3.5 h-3.5" />
             <span>الشراكات المؤسسية والتواصل الميداني</span>
           </div>
@@ -153,22 +153,22 @@ export const PartnerContactPage: React.FC = () => {
             >
               <div className="flex items-center justify-between pb-3 border-b border-stone-800">
                 <div className="font-bold text-white text-base">{office.city}</div>
-                <span className="w-8 h-8 rounded-full bg-stone-950 border border-stone-700 flex items-center justify-center font-mono text-xs font-bold text-red-400">
+                <span className="w-8 h-8 rounded-full bg-stone-950 border border-stone-700 flex items-center justify-center font-mono text-xs font-bold text-emerald-400">
                   {office.flag}
                 </span>
               </div>
 
               <div className="space-y-3 text-xs text-stone-400">
                 <div className="flex items-start gap-2">
-                  <MapPin className="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" />
+                  <MapPin className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" />
                   <span>{office.address}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Phone className="w-4 h-4 text-red-500 flex-shrink-0" />
+                  <Phone className="w-4 h-4 text-emerald-400 flex-shrink-0" />
                   <span dir="ltr" className="font-mono">{office.phone}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Mail className="w-4 h-4 text-red-500 flex-shrink-0" />
+                  <Mail className="w-4 h-4 text-emerald-400 flex-shrink-0" />
                   <span className="font-mono">{office.email}</span>
                 </div>
               </div>
@@ -179,7 +179,7 @@ export const PartnerContactPage: React.FC = () => {
         {/* Strategic Partnership Inquiry Form */}
         <div className="bg-stone-900/80 rounded-3xl border border-stone-800 p-8 sm:p-12 shadow-2xl max-w-3xl mx-auto">
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 rounded-2xl bg-red-950/60 border border-red-800 text-red-500">
+            <div className="p-3 rounded-2xl bg-emerald-950/60 border border-emerald-800 text-emerald-400">
               <ShieldCheck className="w-6 h-6" />
             </div>
             <div>
@@ -214,7 +214,7 @@ export const PartnerContactPage: React.FC = () => {
                     required
                     value={partnerData.orgName}
                     onChange={(e) => setPartnerData({ ...partnerData, orgName: e.target.value })}
-                    className="w-full bg-stone-950 border border-stone-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-red-500"
+                    className="w-full bg-stone-950 border border-stone-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500"
                   />
                 </div>
 
@@ -227,7 +227,7 @@ export const PartnerContactPage: React.FC = () => {
                     required
                     value={partnerData.contactPerson}
                     onChange={(e) => setPartnerData({ ...partnerData, contactPerson: e.target.value })}
-                    className="w-full bg-stone-950 border border-stone-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-red-500"
+                    className="w-full bg-stone-950 border border-stone-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500"
                   />
                 </div>
               </div>
@@ -242,7 +242,7 @@ export const PartnerContactPage: React.FC = () => {
                     required
                     value={partnerData.email}
                     onChange={(e) => setPartnerData({ ...partnerData, email: e.target.value })}
-                    className="w-full bg-stone-950 border border-stone-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-red-500"
+                    className="w-full bg-stone-950 border border-stone-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500"
                   />
                 </div>
 
@@ -253,7 +253,7 @@ export const PartnerContactPage: React.FC = () => {
                   <select
                     value={partnerData.partnershipType}
                     onChange={(e) => setPartnerData({ ...partnerData, partnershipType: e.target.value })}
-                    className="w-full bg-stone-950 border border-stone-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-red-500 font-bold"
+                    className="w-full bg-stone-950 border border-stone-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500 font-bold"
                   >
                     <option value="institutional">تمويل برامجي ومشاريع تنموية كبرى</option>
                     <option value="water">شراكة حفر مجمعات مياه بالطاقة الشمسية</option>
@@ -273,13 +273,13 @@ export const PartnerContactPage: React.FC = () => {
                   value={partnerData.notes}
                   onChange={(e) => setPartnerData({ ...partnerData, notes: e.target.value })}
                   placeholder="أهداف التعاون، الميزانية التقديرية، النطاق الجغرافي المقترح..."
-                  className="w-full bg-stone-950 border border-stone-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-red-500"
+                  className="w-full bg-stone-950 border border-stone-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-red-600 hover:bg-red-500 text-white font-black py-4 px-6 rounded-2xl text-sm flex items-center justify-center gap-2 shadow-xl shadow-red-950/60 transition"
+                className="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-black py-4 px-6 rounded-2xl text-sm flex items-center justify-center gap-2 shadow-xl shadow-emerald-950/60 transition"
               >
                 <Send className="w-4 h-4" />
                 <span>إرسال مقترح الشراكة</span>

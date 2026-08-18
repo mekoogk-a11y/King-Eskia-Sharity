@@ -27,13 +27,13 @@ export const HeartOfMaliSection: React.FC<HeartOfMaliSectionProps> = ({
   return (
     <section id="heart-of-mali" className="py-20 bg-black relative overflow-hidden">
       {/* Subtle background ornamentation */}
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-red-950/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 left-0 w-96 h-96 bg-emerald-950/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 pb-4 border-b border-stone-800 gap-4">
           <div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-950/40 border border-red-800 text-red-400 text-xs font-bold mb-3">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-950/40 border border-emerald-800 text-emerald-400 text-xs font-bold mb-3">
               <Landmark className="w-3.5 h-3.5" />
               <span>أقاليم ومدن مالي التاريخية</span>
             </div>
@@ -56,7 +56,7 @@ export const HeartOfMaliSection: React.FC<HeartOfMaliSectionProps> = ({
             return (
               <div
                 key={region.id}
-                className="group bg-stone-950 rounded-2xl border border-stone-800 hover:border-red-600/60 transition-all duration-300 overflow-hidden flex flex-col shadow-xl hover:-translate-y-1"
+                className="group bg-stone-950 rounded-2xl border border-stone-800 hover:border-emerald-600/60 transition-all duration-300 overflow-hidden flex flex-col shadow-xl hover:-translate-y-1"
               >
                 {/* Image & Overlay */}
                 <div className="relative h-48 overflow-hidden">
@@ -69,7 +69,7 @@ export const HeartOfMaliSection: React.FC<HeartOfMaliSectionProps> = ({
 
                   <div className="absolute top-3 start-3">
                     <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-black/80 backdrop-blur-sm border border-stone-700 text-[11px] font-bold text-amber-400">
-                      <MapPin className="w-3 h-3 text-red-500" />
+                      <MapPin className="w-3 h-3 text-emerald-500" />
                       <span>{region.activeInitiativesCount} {t.heartOfMali.initiatives}</span>
                     </span>
                   </div>
@@ -78,7 +78,7 @@ export const HeartOfMaliSection: React.FC<HeartOfMaliSectionProps> = ({
                 {/* Content */}
                 <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
                   <div>
-                    <h3 className="text-lg font-black text-white group-hover:text-red-400 transition-colors">
+                    <h3 className="text-lg font-black text-white group-hover:text-emerald-400 transition-colors">
                       {name}
                     </h3>
                     <p className="text-stone-400 text-xs leading-relaxed mt-2 line-clamp-3">
@@ -89,7 +89,7 @@ export const HeartOfMaliSection: React.FC<HeartOfMaliSectionProps> = ({
                   <div className="pt-2 border-t border-stone-800/80 flex items-center justify-between">
                     <button
                       onClick={() => setActiveRegionModal(region)}
-                      className="text-xs font-bold text-red-400 hover:text-red-300 flex items-center gap-1 transition"
+                      className="text-xs font-bold text-emerald-400 hover:text-emerald-300 flex items-center gap-1 transition"
                     >
                       <span>{t.heartOfMali.discoverRegion}</span>
                       <ArrowIcon className="w-3.5 h-3.5" />
@@ -129,7 +129,7 @@ export const HeartOfMaliSection: React.FC<HeartOfMaliSectionProps> = ({
               </button>
 
               <div className="absolute bottom-4 start-6">
-                <span className="text-xs text-red-500 font-bold font-mono uppercase">MALI REGIONAL HERITAGE</span>
+                <span className="text-xs text-emerald-500 font-bold font-mono uppercase">MALI REGIONAL HERITAGE</span>
                 <h3 className="text-2xl sm:text-3xl font-black text-white">
                   {activeRegionModal.name[language] || activeRegionModal.name.ar}
                 </h3>
@@ -169,7 +169,7 @@ export const HeartOfMaliSection: React.FC<HeartOfMaliSectionProps> = ({
                     setActiveRegionModal(null);
                     onOpenDonate();
                   }}
-                  className="px-6 py-2.5 rounded-xl bg-red-600 hover:bg-red-500 text-white text-xs font-bold shadow-lg shadow-red-950/60"
+                  className="px-6 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-lg shadow-emerald-950/60"
                 >
                   {t.donation.modalTitle}
                 </button>

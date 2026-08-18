@@ -32,20 +32,25 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, onOpenDonate }) => {
         />
         {/* Cinematic Dual Gradient Overlays */}
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/85 to-black/60" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-red-950/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-emerald-950/20" />
 
         {/* Subtle geometric pattern overlay */}
-        <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#EF4444_1px,transparent_1px)] [background-size:24px_24px]" />
+        <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#10B981_1px,transparent_1px)] [background-size:24px_24px]" />
       </div>
 
       {/* Hero Content Container */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-20 lg:py-28 text-center sm:text-start flex flex-col items-center sm:items-start justify-center">
-        {/* Official Certification Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-900/90 border border-stone-700/80 text-stone-200 text-xs sm:text-sm font-bold mb-6 shadow-xl backdrop-blur-md animate-fadeIn">
-          <span className="w-2.5 h-2.5 rounded-full bg-red-600 animate-pulse flex-shrink-0" />
-          <span className="text-red-400 font-extrabold">{t.hero.badge.split('•')[0]}</span>
+        {/* Official Mali Flag & Certification Badge */}
+        <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-stone-900/90 border border-stone-700/80 text-stone-200 text-xs sm:text-sm font-bold mb-6 shadow-xl backdrop-blur-md animate-fadeIn">
+          {/* Stylized Mali Flag Emblem */}
+          <div className="flex items-center h-4 w-6 rounded overflow-hidden shadow-inner border border-stone-600/60 flex-shrink-0">
+            <span className="w-1/3 h-full bg-emerald-500" />
+            <span className="w-1/3 h-full bg-amber-400" />
+            <span className="w-1/3 h-full bg-red-500" />
+          </div>
+          <span className="text-emerald-400 font-extrabold">{t.hero.badge.split('•')[0]}</span>
           <span className="text-stone-500">•</span>
-          <span className="text-stone-300">{t.hero.badge.split('•')[1] || 'منطقة الساحل الإفريقي'}</span>
+          <span className="text-stone-300">{t.hero.badge.split('•')[1] || 'جمهورية مالي والساحل الإفريقي'}</span>
         </div>
 
         {/* Main Royal Humanitarian Headline */}
@@ -53,7 +58,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, onOpenDonate }) => {
           <span className="block text-stone-100">
             {t.hero.title}
           </span>
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-rose-500 to-amber-500">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-amber-400">
             مؤسسة الملك اسكيا الخيرية
           </span>
         </h1>
@@ -65,10 +70,10 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, onOpenDonate }) => {
 
         {/* 3 Call-To-Action Action Buttons */}
         <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4 w-full sm:w-auto mb-14">
-          {/* Primary Donate CTA (Vibrant Red) */}
+          {/* Primary Donate CTA (Calm Emerald Theme) */}
           <button
             onClick={onOpenDonate}
-            className="w-full sm:w-auto bg-gradient-to-r from-red-600 via-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-black text-base px-8 py-4 rounded-2xl shadow-xl shadow-red-950/60 border border-red-500/50 flex items-center justify-center gap-3 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
+            className="w-full sm:w-auto bg-gradient-to-r from-emerald-600 via-emerald-600 to-teal-700 hover:from-emerald-500 hover:to-emerald-600 text-white font-black text-base px-8 py-4 rounded-2xl shadow-xl shadow-emerald-950/60 border border-emerald-400/40 flex items-center justify-center gap-3 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
           >
             <Heart className="w-5 h-5 fill-current text-white animate-pulse" />
             <span>{t.hero.donateBtn}</span>
@@ -95,7 +100,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, onOpenDonate }) => {
         {/* Live Sahel Focus Indicators & Trust Badges */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 w-full max-w-3xl pt-4 border-t border-stone-800/80">
           <div className="flex items-center gap-3 p-3.5 rounded-xl bg-stone-950/70 border border-stone-800/80 backdrop-blur-sm">
-            <div className="p-2 rounded-lg bg-red-950/50 text-red-400 border border-red-900/50 flex-shrink-0">
+            <div className="p-2 rounded-lg bg-emerald-950/50 text-emerald-400 border border-emerald-900/50 flex-shrink-0">
               <ShieldCheck className="w-5 h-5" />
             </div>
             <div className="text-start">

@@ -22,8 +22,8 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenDonate }) => {
 
   return (
     <footer className="bg-stone-950 text-stone-300 border-t border-stone-800 relative overflow-hidden">
-      {/* Subtle background red glow */}
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-red-950/20 rounded-full blur-3xl pointer-events-none" />
+      {/* Subtle background calm emerald glow */}
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-emerald-950/20 rounded-full blur-3xl pointer-events-none" />
 
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-16 pb-12 relative z-10">
@@ -37,7 +37,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenDonate }) => {
 
             <div className="flex items-center gap-3 pt-2">
               <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-stone-900 border border-stone-800 text-xs text-stone-300">
-                <ShieldCheck className="w-4 h-4 text-red-500" />
+                <ShieldCheck className="w-4 h-4 text-emerald-400" />
                 <span>{t.transparency.governanceCharter}</span>
               </div>
               <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-stone-900 border border-stone-800 text-xs text-stone-300">
@@ -52,10 +52,10 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenDonate }) => {
                 <span className="w-2 h-2 rounded-full bg-emerald-500" /> Mali
               </span>
               <span className="flex items-center gap-1 bg-stone-900/80 px-2 py-1 rounded border border-stone-800">
-                <span className="w-2 h-2 rounded-full bg-red-500" /> Burkina Faso
+                <span className="w-2 h-2 rounded-full bg-amber-500" /> Niger
               </span>
               <span className="flex items-center gap-1 bg-stone-900/80 px-2 py-1 rounded border border-stone-800">
-                <span className="w-2 h-2 rounded-full bg-amber-500" /> Niger
+                <span className="w-2 h-2 rounded-full bg-emerald-600" /> Sahel
               </span>
             </div>
           </div>
@@ -69,7 +69,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenDonate }) => {
               <li>
                 <button
                   onClick={() => onNavigate('home')}
-                  className="hover:text-red-400 transition flex items-center gap-1.5"
+                  className="hover:text-emerald-400 transition flex items-center gap-1.5"
                 >
                   <span>{t.nav.home}</span>
                 </button>
@@ -77,7 +77,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenDonate }) => {
               <li>
                 <button
                   onClick={() => onNavigate('about')}
-                  className="hover:text-red-400 transition flex items-center gap-1.5"
+                  className="hover:text-emerald-400 transition flex items-center gap-1.5"
                 >
                   <span>{t.nav.about}</span>
                 </button>
@@ -85,7 +85,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenDonate }) => {
               <li>
                 <button
                   onClick={() => onNavigate('where-we-work')}
-                  className="hover:text-red-400 transition flex items-center gap-1.5"
+                  className="hover:text-emerald-400 transition flex items-center gap-1.5"
                 >
                   <span>{t.nav.whereWeWork}</span>
                 </button>
@@ -93,23 +93,15 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenDonate }) => {
               <li>
                 <button
                   onClick={() => onNavigate('heart-of-mali')}
-                  className="hover:text-red-400 transition flex items-center gap-1.5"
+                  className="hover:text-emerald-400 transition flex items-center gap-1.5"
                 >
                   <span>{t.nav.heartOfMali}</span>
                 </button>
               </li>
               <li>
                 <button
-                  onClick={() => onNavigate('campaigns')}
-                  className="hover:text-red-400 transition flex items-center gap-1.5"
-                >
-                  <span>{t.nav.campaigns}</span>
-                </button>
-              </li>
-              <li>
-                <button
                   onClick={() => onNavigate('projects')}
-                  className="hover:text-red-400 transition flex items-center gap-1.5"
+                  className="hover:text-emerald-400 transition flex items-center gap-1.5"
                 >
                   <span>{t.nav.projects}</span>
                 </button>
@@ -117,7 +109,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenDonate }) => {
               <li>
                 <button
                   onClick={() => onNavigate('impact')}
-                  className="hover:text-red-400 transition flex items-center gap-1.5"
+                  className="hover:text-emerald-400 transition flex items-center gap-1.5"
                 >
                   <span>{t.nav.impact}</span>
                 </button>
@@ -140,21 +132,21 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenDonate }) => {
                 <span>{t.whyWeWork.educationTitle}</span>
               </li>
               <li className="flex items-center gap-1.5 hover:text-stone-200">
-                <span className="w-1.5 h-1.5 rounded-full bg-rose-500" />
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
                 <span>{t.whyWeWork.healthTitle}</span>
               </li>
               <li className="flex items-center gap-1.5 hover:text-stone-200">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                <span className="w-1.5 h-1.5 rounded-full bg-teal-500" />
                 <span>{t.whyWeWork.reliefTitle}</span>
               </li>
               <li className="flex items-center gap-1.5 hover:text-stone-200">
-                <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />
+                <span className="w-1.5 h-1.5 rounded-full bg-amber-600" />
                 <span>{t.whyWeWork.communityTitle}</span>
               </li>
               <li className="pt-2">
                 <button
                   onClick={() => onNavigate('volunteer')}
-                  className="text-red-400 font-bold hover:underline flex items-center gap-1 text-xs"
+                  className="text-emerald-400 font-bold hover:underline flex items-center gap-1 text-xs"
                 >
                   <span>{t.nav.volunteer}</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
@@ -170,16 +162,16 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenDonate }) => {
             </h3>
             <ul className="space-y-3 text-xs text-stone-400">
               <li className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" />
                 <span>{t.contact.addressBamako}</span>
               </li>
               <li className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-red-500 flex-shrink-0" />
+                <Mail className="w-4 h-4 text-emerald-400 flex-shrink-0" />
                 <span>contact@askiafoundation.org</span>
               </li>
               <li className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-red-500 flex-shrink-0" />
-                <span dir="ltr">+223 20 00 00 00</span>
+                <Phone className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                <span dir="ltr">00249919980435</span>
               </li>
               {/* Media & Public Relations WhatsApp Link */}
               <li className="pt-1">
@@ -204,7 +196,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenDonate }) => {
               <li className="pt-1">
                 <button
                   onClick={onOpenDonate}
-                  className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-bold py-2.5 px-4 rounded-xl text-xs flex items-center justify-center gap-2 shadow-lg shadow-red-900/30"
+                  className="w-full bg-gradient-to-r from-emerald-600 via-emerald-600 to-teal-700 hover:from-emerald-500 hover:to-emerald-600 text-white font-bold py-2.5 px-4 rounded-xl text-xs flex items-center justify-center gap-2 shadow-lg shadow-emerald-950/40 border border-emerald-500/30"
                 >
                   <Heart className="w-3.5 h-3.5 fill-current" />
                   <span>{t.nav.donateNow}</span>
@@ -235,7 +227,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenDonate }) => {
               {t.footer.financialAudit}
             </button>
             <span>•</span>
-            <button onClick={() => onNavigate('admin')} className="text-stone-400 hover:text-red-400 font-mono">
+            <button onClick={() => onNavigate('admin')} className="text-stone-400 hover:text-emerald-400 font-mono">
               {t.nav.admin}
             </button>
           </div>

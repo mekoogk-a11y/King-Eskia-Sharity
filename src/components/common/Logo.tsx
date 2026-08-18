@@ -48,11 +48,11 @@ export const Logo: React.FC<LogoProps> = ({
               <stop offset="100%" stopColor="#92400E" />
             </linearGradient>
 
-            {/* Radiant Askia Red Gradient */}
-            <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#EF4444" />
-              <stop offset="50%" stopColor="#DC2626" />
-              <stop offset="100%" stopColor="#991B1B" />
+            {/* Calming Emerald Gradient */}
+            <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#34D399" />
+              <stop offset="50%" stopColor="#10B981" />
+              <stop offset="100%" stopColor="#047857" />
             </linearGradient>
 
             {/* Shield Dark Gradient */}
@@ -60,6 +60,11 @@ export const Logo: React.FC<LogoProps> = ({
               <stop offset="0%" stopColor="#1C1917" />
               <stop offset="100%" stopColor="#0C0A09" />
             </linearGradient>
+
+            {/* Clip path for Mali Flag inside the Shield */}
+            <clipPath id="maliFlagShieldClip">
+              <path d="M50 12C68 12 80 20 80 38C80 58 50 82 50 82C50 82 20 58 20 38C20 20 32 12 50 12Z" />
+            </clipPath>
           </defs>
 
           {/* Outer Royal African Shield */}
@@ -70,51 +75,43 @@ export const Logo: React.FC<LogoProps> = ({
             strokeWidth="2.5"
           />
 
-          {/* Inner Red Concentric Border */}
+          {/* Inner Calming Emerald Concentric Border */}
           <path
-            d="M50 9C70 9 83 19 83 38C83 60 50 87 50 87C50 87 17 60 17 38C17 19 30 9 50 9Z"
+            d="M50 8C70 8 84 18 84 38C84 60 50 88 50 88C50 88 16 60 16 38C16 18 30 8 50 8Z"
             fill="#09090b"
-            stroke="url(#redGrad)"
-            strokeWidth="1.8"
-            strokeDasharray="2 1"
+            stroke="url(#emeraldGrad)"
+            strokeWidth="1.5"
           />
 
-          {/* Historic Tomb of Askia / Songhai Pyramidal Minaret Silhouette */}
-          {/* Base stepped pyramid */}
+          {/* OFFICIAL FLAG OF MALI (Vertical Tricolor: Green, Yellow/Gold, Red) */}
+          <g clipPath="url(#maliFlagShieldClip)">
+            {/* Green Stripe (Left / First) */}
+            <rect x="20" y="10" width="20" height="75" fill="#10B981" />
+            {/* Yellow / Gold Stripe (Middle) */}
+            <rect x="40" y="10" width="20" height="75" fill="#F59E0B" />
+            {/* Red Stripe (Right / Third) */}
+            <rect x="60" y="10" width="20" height="75" fill="#DC2626" />
+          </g>
+
+          {/* Golden Shield Inner Trim */}
           <path
-            d="M26 62L74 62L68 44L32 44L26 62Z"
-            fill="url(#goldGrad)"
-            opacity="0.95"
-          />
-          {/* Middle step */}
-          <path
-            d="M32 44L68 44L62 30L38 30L32 44Z"
-            fill="url(#goldGrad)"
+            d="M50 12C68 12 80 20 80 38C80 58 50 82 50 82C50 82 20 58 20 38C20 20 32 12 50 12Z"
+            fill="none"
+            stroke="url(#goldGrad)"
+            strokeWidth="1.5"
             opacity="0.9"
           />
-          {/* Top spire */}
-          <path
-            d="M38 30L62 30L54 18L46 18L38 30Z"
-            fill="url(#goldGrad)"
-          />
-          {/* Crown Spire / Minaret Peak */}
-          <polygon points="50,11 46,18 54,18" fill="#FDE68A" />
 
-          {/* Historic Wooden Beams (Toron) Motifs of Sudano-Sahelian Architecture */}
-          <line x1="28" y1="54" x2="72" y2="54" stroke="#78350F" strokeWidth="1.5" strokeLinecap="round" />
-          <line x1="34" y1="38" x2="66" y2="38" stroke="#78350F" strokeWidth="1.5" strokeLinecap="round" />
-          <line x1="40" y1="24" x2="60" y2="24" stroke="#78350F" strokeWidth="1.5" strokeLinecap="round" />
-
-          {/* Central Humanitarian Flame / Heart in Crimson */}
-          <circle cx="50" cy="48" r="8" fill="#0C0A09" stroke="url(#redGrad)" strokeWidth="1.5" />
-          <path
-            d="M50 43C53 43 55 45 55 48C55 52 50 55 50 55C50 55 45 52 45 48C45 45 47 43 50 43Z"
-            fill="url(#redGrad)"
+          {/* Center Royal Seal / Star of Hope in Pure Gold */}
+          <circle cx="50" cy="46" r="9" fill="#0C0A09" stroke="url(#goldGrad)" strokeWidth="1.8" />
+          <polygon
+            points="50,39 52.5,43.5 57,44 53.8,47 54.8,51.5 50,49 45.2,51.5 46.2,47 43,44 47.5,43.5"
+            fill="#F59E0B"
           />
 
-          {/* Three Stars Representing Mali, Burkina Faso, Niger */}
+          {/* Three Stars Representing Unity, Dignity, Peace */}
           <circle cx="34" cy="72" r="2.2" fill="#F59E0B" />
-          <circle cx="50" cy="76" r="2.8" fill="#EF4444" />
+          <circle cx="50" cy="76" r="2.8" fill="#10B981" />
           <circle cx="66" cy="72" r="2.2" fill="#F59E0B" />
 
           {/* Laurel / Olive branches of peace around bottom */}
@@ -135,8 +132,8 @@ export const Logo: React.FC<LogoProps> = ({
         {/* Small Sahel Flag Color Accent Dots */}
         <div className="absolute -bottom-0.5 -right-0.5 flex items-center space-x-0.5 rtl:space-x-reverse bg-black/90 p-0.5 rounded-full border border-stone-800">
           <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" title="Mali" />
-          <span className="w-1.5 h-1.5 rounded-full bg-red-600" title="Burkina Faso" />
           <span className="w-1.5 h-1.5 rounded-full bg-amber-500" title="Niger" />
+          <span className="w-1.5 h-1.5 rounded-full bg-emerald-600" title="Sahel" />
         </div>
       </div>
 
@@ -152,7 +149,7 @@ export const Logo: React.FC<LogoProps> = ({
               </div>
               {showSubtitle && (
                 <span className="text-[10px] sm:text-[11px] text-stone-400 font-mono uppercase tracking-wider mt-0.5 flex items-center gap-1">
-                  <span className="text-red-500 font-bold">FONDATION ROYALE ASKIA</span>
+                  <span className="text-emerald-400 font-bold">FONDATION ROYALE ASKIA</span>
                   <span className="text-stone-600">•</span>
                   <span>SAHEL</span>
                 </span>
@@ -167,7 +164,7 @@ export const Logo: React.FC<LogoProps> = ({
               </div>
               {showSubtitle && (
                 <span className="text-[10px] sm:text-[11px] text-stone-400 font-medium tracking-wide mt-0.5">
-                  <span className="text-red-500 font-bold">Mali • Burkina Faso • Niger</span>
+                  <span className="text-emerald-400 font-bold">Mali • Burkina Faso • Niger</span>
                 </span>
               )}
             </>
@@ -180,7 +177,7 @@ export const Logo: React.FC<LogoProps> = ({
               </div>
               {showSubtitle && (
                 <span className="text-[10px] sm:text-[11px] text-stone-400 font-medium tracking-wide mt-0.5">
-                  <span className="text-red-500 font-bold">FOUNDATION</span> • Sahel Humanitarian
+                  <span className="text-emerald-400 font-bold">FOUNDATION</span> • Sahel Humanitarian
                 </span>
               )}
             </>
